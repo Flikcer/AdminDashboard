@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- App Drawer -->
+    <div class="drawer">
+      <div class="dashboard menuItem">
+        <img src="/icons/view-dashboard.svg" alt="dashboard-icon" />
+        <h1>Dashboard</h1>
+      </div>
+      <div class="menuItem">
+        <img src="/icons/home.svg" alt="home-icon" />
+        <h1>Home</h1>
+      </div>
+      <div class="menuItem">
+        <img src="/icons/card-account-details.svg" alt="profile-icon" />
+        <h1>Profile</h1>
+      </div>
+      <div class="menuItem">
+        <img src="/icons/message-text.svg" alt="message-icon" />
+        <h1>Messages</h1>
+      </div>
+      <div class="menuItem">
+        <img src="/icons/clock-outline.svg" alt="history-icon" />
+        <h1>History</h1>
+      </div>
+      <div class="menuItem">
+        <img src="/icons/note-multiple.svg" alt="tasks" />
+        <h1>Tasks</h1>
+      </div>
+      <div class="menuItem">
+        <img src="/icons/account-group.svg" alt="communities-icon" />
+        <h1>Communities</h1>
+      </div>
+      <!-- Needs some spacing to show new category -->
+      <div class="menuItem">
+        <img src="/icons/cog-outline.svg" alt="settings-icon" />
+        <h1>Settings</h1>
+      </div>
+      <div class="menuItem">
+        <img src="/icons/message-question.svg" alt="support-icon" />
+        <h1>Support</h1>
+      </div>
+      <div class="menuItem">
+        <img src="/icons/shield-check-outline.svg" alt="privacy-icon" />
+        <h1>Privacy</h1>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <!-- Top -->
+      <div class="topNav">
+        <!-- search bar and icon -->
+        <div class="search">
+          <div class="menuItem">
+            <img src="/icons/magnify.svg" alt="search-icon" />
+          </div>
+          <input type="text" name="search" autocomplete="off" />
+        </div>
+        <div class="account">
+          <div class="menuIcon">
+            <img src="icons/bell-ring.svg" alt="bell-icon" />
+          </div>
+          <div class="gh-avatar">
+            <!-- <img src="https://github.com/Flikcer.png" alt="" /> -->
+            <p class="name">AnthonyD</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="bottom">
+        <div class="profile">
+          <div class="gh-avtar"></div>
+          <div class="profileName">
+            <p class="greeting">Welcome back,</p>
+            <p class="name">
+              Anthony <span class="username">(@AnthonyD)</span>
+            </p>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="btn">New</button>
+          <button class="btn">Upload</button>
+          <button class="btn">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+      <div class="projects">
+        <h3>Projects</h3>
+
+        <div class="cards">
+          <div class="card">
+            <h5 class="cardTitle">New Cool Project!</h5>
+            <p class="cardText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              placeat soluta eum repellat, nulla impedit rem voluptatum iste ad
+              unde culpa fugiat,
+            </p>
+            <div class="icons">
+              <img src="/icons/star-plus-outline.svg" alt="add-icon" />
+              <img src="icons/eye-plus-outline.svg" alt="icon" />
+              <img src="icons/source-fork.svg" alt="source-icon" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h5 class="cardTitle">Another project done!</h5>
+            <p class="cardText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              placeat soluta eum repellat, nulla impedit rem voluptatum iste ad
+              unde culpa fugiat,
+            </p>
+            <div class="icons">
+              <img src="/icons/star-plus-outline.svg" alt="add-icon" />
+              <img src="icons/eye-plus-outline.svg" alt="icon" />
+              <img src="icons/source-fork.svg" alt="source-icon" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h5 class="cardTitle">Very cool post!</h5>
+            <p class="cardText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              placeat soluta eum repellat, nulla impedit rem voluptatum iste ad
+              unde culpa fugiat,
+            </p>
+            <div class="icons">
+              <img src="/icons/star-plus-outline.svg" alt="add-icon" />
+              <img src="icons/eye-plus-outline.svg" alt="icon" />
+              <img src="icons/source-fork.svg" alt="source-icon" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h5 class="cardTitle">Efficient Code!</h5>
+            <p class="cardText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              placeat soluta eum repellat, nulla impedit rem voluptatum iste ad
+              unde culpa fugiat,
+            </p>
+            <div class="icons">
+              <img src="/icons/star-plus-outline.svg" alt="add-icon" />
+              <img src="icons/eye-plus-outline.svg" alt="icon" />
+              <img src="icons/source-fork.svg" alt="source-icon" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h5 class="cardTitle">Clean Syntax!</h5>
+            <p class="cardText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              placeat soluta eum repellat, nulla impedit rem voluptatum iste ad
+              unde culpa fugiat,
+            </p>
+            <div class="icons">
+              <img src="/icons/star-plus-outline.svg" alt="add-icon" />
+              <img src="icons/eye-plus-outline.svg" alt="icon" />
+              <img src="icons/source-fork.svg" alt="source-icon" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h5 class="cardTitle">JavaScript!</h5>
+            <p class="cardText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              placeat soluta eum repellat, nulla impedit rem voluptatum iste ad
+              unde culpa fugiat,
+            </p>
+            <div class="icons">
+              <img src="/icons/star-plus-outline.svg" alt="add-icon" />
+              <img src="icons/eye-plus-outline.svg" alt="icon" />
+              <img src="icons/source-fork.svg" alt="source-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- side content -->
+      <div class="announcements">
+        <ul class="card">
+          <li class="announcement">
+            <h5 class="cardTtitle">Maintenence</h5>
+            <p class="cardText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+              tempora esse ipsam velit tempore consectetur cumque vero
+              dignissimos at rem officia vitae eum, quia eos quam, eveniet,
+              voluptatem dicta quibusdam.
+            </p>
+          </li>
+          <li class="announcement">
+            <h5 class="cardTtitle">Hard Work!</h5>
+            <p class="cardText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+              tempora esse ipsam velit tempore consectetur cumque vero
+              dignissimos at rem officia vitae eum, quia eos quam, eveniet,
+              voluptatem dicta quibusdam.
+            </p>
+          </li>
+          <li class="announcement">
+            <h5 class="cardTtitle">Striving to Improve!</h5>
+            <p class="cardText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+              tempora esse ipsam velit tempore consectetur cumque vero
+              dignissimos at rem officia vitae eum, quia eos quam, eveniet,
+              voluptatem dicta quibusdam.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="trending">
+        <h3>Trending</h3>
+        <ul class="card">
+          <li class="trend trend1">
+            <div class="gh-avatar2"></div>
+            <div class="account">
+              <p class="username">@Paul</p>
+              <p class="cardText">Code Together</p>
+            </div>
+          </li>
+          <li class="trend trend2">
+            <div class="gh-avatar"></div>
+            <div class="account">
+              <p class="username">@AnthonyD</p>
+              <p class="cardText">Smart choices</p>
+            </div>
+          </li>
+          <li class="trend trend3">
+            <div class="gh-avatar3"></div>
+            <div class="account">
+              <p class="username">@WilliamZ</p>
+              <p class="cardText">Teamwork</p>
+            </div>
+          </li>
+          <li class="trend trend4">
+            <div class="gh-avatar4"></div>
+            <div class="account">
+              <p class="username">@MarkR</p>
+              <p class="cardText">JavaScript!</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
