@@ -31,3 +31,328 @@ body {
   grid-template-rows: 0.8fr 4fr;
   grid-template-columns: 5rem 1fr 1fr 1fr;
 }
+.drawer {
+  grid-area: drawer;
+  background-color: var(--drawer-color);
+  width: 5rem;
+  position: fixed;
+  transition: var(--transition-drawer);
+  overflow: hidden;
+  height: 100vh;
+}
+
+.drawer:hover {
+  width: var(--drawer-width);
+}
+
+.menuItem > h1 {
+  display: none;
+  margin-left: 10%;
+}
+
+.drawer:hover > .menuItem > h1 {
+  display: inline;
+}
+
+.drawer:hover ~ .navbar,
+.drawer:hover ~ .content {
+  margin-left: calc(var(--drawer-width) - 5rem);
+}
+
+.menuItem {
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.drawer > div:first-child {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--drawer-color);
+  padding: 20px 0;
+  width: 30px;
+  height: 30px;
+}
+.drawer > div:not(:first-child) > * {
+  padding: 1vw 0.1vw 0.1vw 0vw;
+  font-size: calc(20px+ 0.2vw);
+  padding-inline: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.drawer > div:not(:first-child) > img {
+  width: calc(20px+0.5vw);
+  height: calc(20px+0.5vw);
+}
+
+.drawer > div:nth-child(8) {
+  padding-top: 60px;
+}
+
+.navbar {
+  grid-area: nav;
+  transition: var(--transition-notDrawer);
+  background-color: var(--nav-bg-1);
+  padding: 1.5rem 3rem;
+  border-bottom: 2px solid rgb(210, 219, 219);
+  position: sticky;
+  top: 0;
+}
+
+.topNav {
+  display: grid;
+  grid-template-columns: 1 fr max-content;
+  margin-bottom: 2.5rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  width: 100%;
+}
+
+.search > input {
+  display: inline-block;
+  border: 0;
+  background-color: var(--nav-color-1);
+  padding: 0.5rem 1.5rem;
+  outline-color: var(--blue1);
+  margin-left: 1.25rem;
+  border-radius: 5px;
+  width: min(80%, 600px);
+  padding-right: 20px;
+}
+.navbar .account {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.gh-avatar {
+  background: var(--gh-avatar) center center / cover no-repeat;
+  border-radius: 50%;
+}
+
+.account .gh-avatar {
+  margin: 0 1rem 0 2.5rem;
+  height: 40px;
+  width: 40px;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile .gh-avatar {
+  width: 75px;
+  height: 75px;
+}
+
+.greeting {
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+.profile.name {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  background-color: var(--drawer-color);
+  color: var(--text-secondary);
+  font-weight: 800;
+  padding: 0.5rem 1.8rem;
+  border-radius: 7px;
+  font-size: 20px;
+  border: 1px solid steelblue;
+  cursor: pointer;
+}
+
+.content {
+  grid-area: content;
+  transition: var(--transition-notDrawer);
+  background-color: var(--content-gray);
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: min-content 1fr;
+  gap: 2rem;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+  overflow: auto;
+  height: 100%;
+}
+
+.content h3 {
+  font: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.projects .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.projects .card {
+  background-color: var(--nav-color-2);
+  border-left: 10px solid gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects .cardTitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.projects .cardText {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.projects .icons {
+  margin-top: auto;
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.4rem;
+  align-items: center;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+.card {
+  background-color: rgba(45, 187, 187, 0.459);
+  padding: 2rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0/0.3), 0 4px 6px -4px rgb(0 0 0 /0.2);
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.announcement {
+  width: 25ch;
+  padding: 1rem 0;
+}
+
+.announcement:first-child {
+  padding-top: 0;
+}
+.announcement:last-child {
+  padding-bottom: 0;
+}
+
+.announcement h5 {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.announcement p {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.announcement + .announcement {
+  border-top: lightgray;
+}
+
+.trending {
+  grid-area: trending;
+}
+.trending .card {
+  padding: 1.5rem;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.trend + .trend {
+  margin-top: 1.5rem;
+}
+
+.trend .account {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.trend .username {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.trend1 .gh-avatar2 {
+  background: var(--gh-avatar2) center center / cover no-repeat;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.trend2 .gh-avatar {
+  background: var(--gh-avatar) center center / cover no-repeat;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.trend3 .gh-avatar3 {
+  background: var(--gh-avatar3) center center / cover no-repeat;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.trend4 .gh-avatar4 {
+  background: var(--gh-avatar4) center center / cover no-repeat;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
