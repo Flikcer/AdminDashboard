@@ -76,6 +76,7 @@ body {
   padding: 20px 0;
   width: 30px;
   height: 30px;
+  margin-left: 24px;
 }
 .drawer > div:not(:first-child) > * {
   padding: 1vw 0.1vw 0.1vw 0vw;
